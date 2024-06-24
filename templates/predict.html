@@ -1,0 +1,137 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>Classification with an Academic Success ML Model</h2>
+<br>
+<form action="" method="post">
+    {{form.hidden_tag()}}
+    <div>
+        {{form.Application_mode.label}}
+        {{form.Application_mode}}
+        {% if form.Application_mode.errors %}
+            {% for error in form.Application_mode.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.tution_fee_up_to_date.label}}
+        {{form.tution_fee_up_to_date}}
+        {% if form.tution_fee_up_to_date.errors %}
+            {% for error in form.tution_fee_up_to_date.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.Gender.label}}
+        {{form.Gender}}
+        {% if form.Gender.errors %}
+            {% for error in form.Gender.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.Scholarship_holder.label}}
+        {{form.Scholarship_holder}}
+        {% if form.Scholarship_holder.errors %}
+            {% for error in form.Scholarship_holder.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.Age_at_enrollment.label}}
+        {{form.Age_at_enrollment}}
+        {% if form.Age_at_enrollment.errors %}
+            {% for error in form.Age_at_enrollment.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.Curricular_units_1st_sem_evaluation.label}}
+        {{form.Curricular_units_1st_sem_evaluation}}
+        {% if form.Curricular_units_1st_sem_evaluation.errors %}
+            {% for error in form.Curricular_units_1st_sem_evaluation.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.Curricular_units_1st_sem_approved.label}}
+        {{form.Curricular_units_1st_sem_approved}}
+        {% if form.Curricular_units_1st_sem_approved.errors %}
+            {% for error in form.Curricular_units_1st_sem_approved.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.Curricular_units_1st_sem_grade.label}}
+        {{form.Curricular_units_1st_sem_grade}}
+        {% if form.Curricular_units_1st_sem_grade.errors %}
+            {% for error in form.Curricular_units_1st_sem_grade.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.Curricular_units_2st_sem_evaluation.label}}
+        {{form.Curricular_units_2st_sem_evaluation}}
+        {% if form.Curricular_units_2st_sem_evaluation.errors %}
+            {% for error in form.Curricular_units_2st_sem_evaluation.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.Curricular_units_2nd_sem_approved.label}}
+        {{form.Curricular_units_2nd_sem_approved}}
+        {% if form.Curricular_units_2nd_sem_approved.errors %}
+            {% for error in form.Curricular_units_2nd_sem_approved.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.Curricular_units_2nd_sem_grade.label}}
+        {{form.Curricular_units_2nd_sem_grade}}
+        {% if form.Curricular_units_2nd_sem_grade.errors %}
+            {% for error in form.Curricular_units_2nd_sem_grade.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.Curricular_units_2nd_sem_enrolled.label}}
+        {{form.Curricular_units_2nd_sem_enrolled}}
+        {% if form.Curricular_units_2nd_sem_enrolled.errors %}
+            {% for error in form.Curricular_units_2nd_sem_enrolled.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>{{ form.submit() }}</div>
+    <br>
+    <div>
+        {{ output }}
+    </div>
+    
+</form>
+
+{% endblock content %}
